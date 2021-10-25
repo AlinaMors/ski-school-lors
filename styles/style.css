@@ -1,17 +1,295 @@
-*{
-font-family: Arial, Helvetica, sans-serif;
-width: ;
-color: ;
-text-align:;
-line-height:;
+/* стили montser. у меня не работают */
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/montserrat-v18-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/montserrat-v18-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-.header{
-  background-color: aqua;
+/* montserrat-500 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/montserrat-v18-latin-500.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/montserrat-v18-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-.promo{
-  background-image: ;
+
+/* oswald-500 - latin */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/oswald-v40-latin-500.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/oswald-v40-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-.adv.footer{
-  background: ;
+
+/* common */
+* {
+  box-sizing: border-box;
 }
-  
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(102, 209, 255, 0.17);
+  /* я час пыталась сделать этот градиент, но если сделать чтоб синий был аж до lead-title то тогда белому ывету не отсается место  */
+  background: linear-gradient(to bottom left, rgba(102, 209, 255, 0.17) 90%, #fff 50%);
+  color: #060d10;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  padding-top: 31px;
+  padding-bottom: 30px;
+  color: black;
+  background-color: #66d1ff;
+}
+
+.header-wrap {
+  margin-left: 584px;
+  display: flex;
+  align-items: center;
+}
+
+/* не знаю как сделать чтоб не писать log1 и log2  */
+.logo-1 {
+  height: 37px;
+  width: 105px;
+  margin-left: 584px;
+  top: 41px;
+}
+.logo-img {
+  height: 50px;
+  width: 34px;
+  margin: 10px;
+}
+
+.logo-2 {
+  height: 37px;
+  width: 105px;
+  margin-left: 0px;
+}
+
+.header-btn {
+  display: inline-block;
+  padding: 8px 41px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-left: 1px;
+}
+
+.header-phone {
+  top: 41px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34px;
+  margin-left: 1103px;
+}
+
+/* main-nav */
+.main-nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left: 81px;
+}
+
+.main-nav a {
+  font-size: 34px;
+  line-height: 45px;
+  text-decoration: none;
+}
+
+/*about*/
+.about {
+  color: #fff;
+  text-align: center;
+  background-image: url("../pic/promo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pic-bg-fade {
+  padding: 766px 0;
+  background-color: rgba(198, 180, 204, 0.3);
+}
+
+.about-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 83px;
+}
+
+.about-text {
+  margin-bottom: 0;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+/* Slogan */
+.slogan {
+  color: black;
+  text-align: center;
+}
+
+.slogan-title {
+  display: block;
+  padding: 130px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500px;
+  font-size: 48px;
+  line-height: 80, 16px;
+}
+
+/* adv */
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 50px;
+}
+.advantages-item {
+  width: 32%;
+  padding: 40px;
+}
+.advantages-card {
+  height: 100%;
+}
+
+.advantages-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  font-weight: 500px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  line-height: 53px;
+}
+.advantages-text {
+  margin-bottom: 0;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400px;
+  font-size: 26px;
+  line-height: 36px;
+}
+
+.lead-title {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 500px;
+  font-size: 48px;
+  line-height: 80px;
+}
+.header-btn {
+  display: inline-block;
+  padding: 8px 41px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  border-radius: 4px;
+}
+.lead-but {
+  text-align: center;
+  margin-top: 130px;
+  margin-bottom: 130px;
+  margin-left: 466px;
+  padding: 15px 108px;
+  cursor: pointer;
+  border: 4px solid black;
+  font-size: 36px;
+  /* background: none; */
+}
+.lead-pic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 130px 30px 180px 30px;
+  width: 297px;
+  height: 297px;
+}
+
+hr {
+  text-align: center;
+  margin: 170px auto;
+  width: 90%;
+  color: grey;
+}
+
+.copyright {
+  margin-left: 98px;
+  font-size: 20px;
+  height: 33, 4px;
+}
+
+.copyright text {
+  margin-left: 623px;
+  font-size: 20px;
+  height: 33, 4px;
+}
+
+/* social icons */
+.social-icons {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social-item {
+  margin-left: 20px;
+}
+
+.social-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-text {
+  font-size: 1px;
+  opacity: 0;
+}
+
+/* Footer */
+.footer {
+  padding: 42px 0;
+  background-color: #060d10;
+  color: #fff;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
